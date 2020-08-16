@@ -37,8 +37,8 @@ footer {
 main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1.5fr;
-      grid-template-columns: 1fr 1.5fr;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
 }
 
 .container {
@@ -63,7 +63,10 @@ main {
 }
 
 .bio {
+  background-color: #212025e6;
   color: #fff;
+  margin-left: 30px;
+  padding: 2em;
 }
 
 .bio > h1 {

@@ -1,6 +1,6 @@
 main {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .container {
@@ -8,13 +8,12 @@ main {
     padding: 2em;
 }
 
-// crops original image into a circle
 .pfp {
     width: 640px;
     height: 640px;
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 50%; // crops original image into a circle
 }
 
 .picture {
@@ -26,7 +25,10 @@ main {
 }
 
 .bio {
+    background-color: #212025e6;;
     color: #fff;
+    margin-left: 30px;
+    padding: 2em;
 }
 
 .bio > h1 { 
