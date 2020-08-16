@@ -1,7 +1,45 @@
 main {
-    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
 }
 
 .container {
     background-color: #333;
+    padding: 2em;
 }
+
+// crops original image into a circle
+.pfp {
+    width: 640px;
+    height: 640px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.picture {
+    display: inline;
+    margin: 0 auto;
+    margin-left: -25%; // centers the image
+    height: 100%;
+    width: auto;
+}
+
+.bio {
+    color: #fff;
+}
+
+.bio > h1 { 
+    font-size: 72px;
+    text-decoration-line: underline;
+}
+.bio > h3 { 
+
+}
+
+.bio > p {
+    color: #fff;
+    line-height: 2;
+}
+
+

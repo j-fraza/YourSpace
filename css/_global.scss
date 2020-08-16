@@ -1,29 +1,34 @@
 body {
+    margin: 0;
     font-size: 100%;
     background-color:#000000e6;
     font-family: $font-body;
 }
 
+header, footer {
+    background-image: url('../images/Vanishing-Stripes.svg');
+}
+
 header {
-    background-color: #20323b;
     display: flex;
-}
-
-header > h1 > i {
-    color: #004daa;
-    padding-right: 2px;
-}
-
-header > h1 {
-    padding: 0px 10px;
-    color: #fff;
 }
 
 h1 {
     font-family: $font-title;
 }
 
+header > h1 {
+    color: #fff;
+    padding: 0px 1em;
+}
+
+header > h1 > i {
+    color: #004daa;
+}
+
 footer {
     background-color: rgb(32, 50, 59);;
     color: #fff;
+    text-align: center;
 }
+

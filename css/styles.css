@@ -1,40 +1,79 @@
 body {
+  margin: 0;
   font-size: 100%;
   background-color: #000000e6;
   font-family: "Open Sans", sans-serif;
 }
 
+header, footer {
+  background-image: url("../images/Vanishing-Stripes.svg");
+}
+
 header {
-  background-color: #20323b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-header > h1 > i {
-  color: #004daa;
-  padding-right: 2px;
-}
-
-header > h1 {
-  padding: 0px 10px;
-  color: #fff;
 }
 
 h1 {
   font-family: "Raleway", sans-serif;
 }
 
+header > h1 {
+  color: #fff;
+  padding: 0px 1em;
+}
+
+header > h1 > i {
+  color: #004daa;
+}
+
 footer {
   background-color: #20323b;
   color: #fff;
+  text-align: center;
 }
 
 main {
-  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5fr;
+      grid-template-columns: 1fr 1.5fr;
 }
 
 .container {
   background-color: #333;
+  padding: 2em;
+}
+
+.pfp {
+  width: 640px;
+  height: 640px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.picture {
+  display: inline;
+  margin: 0 auto;
+  margin-left: -25%;
+  height: 100%;
+  width: auto;
+}
+
+.bio {
+  color: #fff;
+}
+
+.bio > h1 {
+  font-size: 72px;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.bio > p {
+  color: #fff;
+  line-height: 2;
 }
 /*# sourceMappingURL=styles.css.map */
