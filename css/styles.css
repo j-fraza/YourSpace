@@ -34,11 +34,13 @@ footer {
   text-align: center;
 }
 
-main {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+@media screen and (min-width: 1024px) {
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
 }
 
 .container {
@@ -47,11 +49,21 @@ main {
 }
 
 .pfp {
-  width: 640px;
-  height: 640px;
+  width: 320px;
+  height: 320px;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+}
+
+@media screen and (min-width: 1024px) {
+  .pfp {
+    width: 640px;
+    height: 640px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+  }
 }
 
 .picture {
@@ -65,12 +77,12 @@ main {
 .bio {
   background-color: #212025e6;
   color: #fff;
-  margin-left: 30px;
+  margin: 30px;
   padding: 2em;
 }
 
 .bio > h1 {
-  font-size: 72px;
+  font-size: 42px;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }

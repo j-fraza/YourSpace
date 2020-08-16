@@ -1,6 +1,8 @@
 main {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
 }
 
 .container {
@@ -9,11 +11,18 @@ main {
 }
 
 .pfp {
-    width: 640px;
-    height: 640px;
+    width: 320px;
+    height: 320px;
     position: relative;
     overflow: hidden;
     border-radius: 50%; // crops original image into a circle
+    @media screen and (min-width: 1024px) {
+        width: 640px;
+        height: 640px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%; // crops original image into a circle
+    }
 }
 
 .picture {
@@ -22,17 +31,18 @@ main {
     margin-left: -25%; // centers the image
     height: 100%;
     width: auto;
+
 }
 
 .bio {
     background-color: #212025e6;;
     color: #fff;
-    margin-left: 30px;
+    margin: 30px;
     padding: 2em;
 }
 
 .bio > h1 { 
-    font-size: 72px;
+    font-size: 42px;
     text-decoration-line: underline;
 }
 .bio > h3 { 
