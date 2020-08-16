@@ -1,0 +1,22 @@
+header {
+    background-color: #20323b;
+    display: flex;
+}
+
+header > h1 > i {
+    color: #004daa;
+    padding-right: 2px;
+}
+
+header > h1 {
+    padding: 0px 10px;
+    color: #fff;
+}
+
+main {
+    color: #fff;
+}
+
+.container {
+    background-color: #333;
+}
