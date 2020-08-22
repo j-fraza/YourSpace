@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-size: 100%;
-    background-color:#000000e6;
+    background-color: rgb(220, 220, 220);
     font-family: $font-body;
 }
 
@@ -10,25 +10,145 @@ header, footer {
 }
 
 header {
-    display: flex;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
 }
 
-h1 {
-    font-family: $font-title;
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.header ul a {
+    color: #fff;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.header ul a:hover {
+    background-color: #aaa;
+}
+
+// Opened menu
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    padding: 28px 20px;
+    margin-top: 10px;
+    position: relative; // parent container for the span so that the child elements could be absolute
+    float: right;
+    cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+// changes the menu based on the input-label action, aka clicking on the hamburger icon 
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;  // affects the last element, ul
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+
+// animation on-click
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+// animation on-click
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+// desktop
+@media (min-width: 1024px) {
+    header {
+        position: absolute;
+    }
+
+    .header ul {
+        margin-top: 10px;
+    }
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
 }
 
 header > h1 {
     color: #fff;
+    float: left;
     padding: 0px 1em;
+
 }
 
 header > h1 > i {
     color: #004daa;
 }
 
+h1 {
+    font-family: $font-title;
+}
+
 footer {
     background-color: rgb(32, 50, 59);;
     color: #fff;
     text-align: center;
+    padding: 1em;
 }
 

@@ -6,7 +6,7 @@ main {
 }
 
 .container {
-    background-color: #333;
+    background-color: rgb(220, 220, 220);
     padding: 2em;
 }
 
@@ -19,9 +19,6 @@ main {
     @media screen and (min-width: 1024px) {
         width: 640px;
         height: 640px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 50%; // crops original image into a circle
     }
 }
 
@@ -35,7 +32,7 @@ main {
 }
 
 .bio {
-    background-color: #212025e6;;
+    background-color: #24232be6;
     color: #fff;
     margin: 30px;
     padding: 2em;
