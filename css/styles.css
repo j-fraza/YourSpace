@@ -150,20 +150,25 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1em;
+  width: 100%;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  background-color: gainsboro;
+  padding: 2em;
 }
 
 @media screen and (min-width: 1024px) {
-  main {
+  .container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 2fr;
         grid-template-columns: 1fr 2fr;
   }
-}
-
-.container {
-  background-color: gainsboro;
-  padding: 2em;
 }
 
 .pfp {
@@ -172,12 +177,20 @@ footer {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 @media screen and (min-width: 1024px) {
   .pfp {
     width: 640px;
     height: 640px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pfp {
+    margin: auto;
   }
 }
 
@@ -190,10 +203,25 @@ footer {
 }
 
 .bio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #24232be6;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   color: #fff;
   margin: 30px;
   padding: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+  .bio {
+    text-align: center;
+  }
 }
 
 .bio > h1 {
@@ -202,8 +230,18 @@ footer {
           text-decoration-line: underline;
 }
 
+.bio > h3 {
+  color: #fff;
+}
+
 .bio > p {
   color: #fff;
   line-height: 2;
+}
+
+@media screen and (min-width: 1024px) {
+  .bio > p {
+    text-align: justify;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

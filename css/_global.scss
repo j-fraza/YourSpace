@@ -16,6 +16,7 @@ header {
     z-index: 3;
 }
 
+// nav wrapper
 .header ul {
     margin: 0;
     padding: 0;
@@ -23,6 +24,7 @@ header {
     overflow: hidden;
 }
 
+// nav links
 .header ul a {
     color: #fff;
     display: block;
@@ -30,6 +32,7 @@ header {
     text-decoration: none;
 }
 
+// nav effects on hover
 .header ul a:hover {
     background-color: #aaa;
 }
@@ -41,6 +44,7 @@ header {
     transition: max-height .2s ease-out;
 }
 
+// hamburger menu icon
 .header .menu-icon {
     padding: 28px 20px;
     margin-top: 10px;
@@ -49,6 +53,7 @@ header {
     cursor: pointer;
 }
 
+// design part of hamburger icon
 .header .menu-icon .nav-icon {
     background: #fff;
     display: block;
@@ -58,6 +63,7 @@ header {
     transition: background .2s ease-out;
 }
 
+// design part of hamburger icon
 .header .menu-icon .nav-icon:before {
     background: #fff;
     content: "";
@@ -69,6 +75,7 @@ header {
     top: 5px;
 }
 
+// design part of hamburger icon
 .header .menu-icon .nav-icon:after {
     background: #fff;
     content: "";
@@ -80,13 +87,14 @@ header {
     top: -5px;
 }
 
+// placebo for on-click
 .header .menu-btn {
     display: none;
 }
 
 // changes the menu based on the input-label action, aka clicking on the hamburger icon 
 .header .menu-btn:checked ~ .menu {
-    max-height: 240px;  // affects the last element, ul
+    max-height: 240px;  // expands listings of the stacked <ul>
 }
 
 .header .menu-btn:checked ~ .menu-icon .nav-icon {
@@ -150,5 +158,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em;
+    width: 100%;
 }
 
